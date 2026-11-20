@@ -1,0 +1,16 @@
+{
+  "name": "Cartes TCG",
+  "short_name": "Cartes TCG",
+  "description": "Collection de cartes à collectionner : galerie, valeur et historique des prix.",
+  "lang": "fr",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ECEDF2",
+  "theme_color": "#ECEDF2",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
