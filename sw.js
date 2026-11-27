@@ -4,7 +4,7 @@
 
 // À changer à chaque nouvelle version de l'app (même numéro que VERSION dans js/views/reglages.js) :
 // le téléphone détecte alors la mise à jour et affiche « Nouvelle version disponible ».
-const CACHE = 'cartes-tcg-1.0.0';
+const CACHE = 'cartes-tcg-1.0.1';
 const FICHIERS = [
   './',
   './index.html',
