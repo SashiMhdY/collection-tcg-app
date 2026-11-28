@@ -3,7 +3,7 @@ import { store } from '../store.js';
 import { useStore, Barre } from '../ui.js';
 import { pluriel } from '../util.js';
 
-export const VERSION = '1.0.0'; // garder le même numéro que CACHE dans sw.js
+export const VERSION = '1.0.1'; // garder le même numéro que CACHE dans sw.js
 
 function FormConnexion({ bouton }) {
   const s = useStore();

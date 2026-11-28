@@ -40,3 +40,9 @@ export const eurosSigne = (n) => (n == null || Number.isNaN(n) ? '' : eurSigne.f
 export const eurosRond = (n) => (n == null || Number.isNaN(n) ? '' : eurRond.format(n));
 export const nombre = (n) => entier.format(n);
 export const pluriel = (n, un, plusieurs) => `${nombre(n)} ${n > 1 ? plusieurs : un}`;
+
+// Lien externe : seules les adresses web (http ou https) sont gardées, pour qu'une donnée ne puisse pas lancer de code.
+export const lienWeb = (u) => {
+  const s = String(u ?? '').trim();
+  return /^https?:\/\//i.test(s) ? s : '';
+};

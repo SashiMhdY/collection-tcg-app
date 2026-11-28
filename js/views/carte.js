@@ -2,7 +2,7 @@
 import { html } from '../vendor/htm-preact.js';
 import { useStore, Barre, Visuel, BoutonPhoto, Ico } from '../ui.js';
 import { cotations, sourceLisible } from '../collection.js';
-import { euros, eurosSigne, dateLongue, dateSansAn, dateCourte } from '../util.js';
+import { euros, eurosSigne, dateLongue, dateSansAn, dateCourte, lienWeb } from '../util.js';
 import { md } from '../md.js';
 import { Courbe } from '../graphique.js';
 
@@ -45,8 +45,8 @@ export function Carte({ id }) {
             <p class="prix-source">Cote du ${dateLongue(d.date)}, ${sourceLisible(d.source)}</p>
             ${ecart != null && html`<p class=${`variation ${ecart > 0 ? 'hausse' : ecart < 0 ? 'baisse' : ''}`}>${ecart ? eurosSigne(ecart) : 'Inchangé'} depuis le ${dateSansAn(p.date)}</p>`}`
         : html`<p class="prix-montant">Sans prix</p><p class="prix-source">Aucune cotation trouvée pour l’instant.</p>`}
-      ${c.cardmarket
-        ? html`<a class="btn btn-large" href=${c.cardmarket} target="_blank" rel="noopener">Voir sur Cardmarket ${Ico.externe()}</a>`
+      ${lienWeb(c.cardmarket)
+        ? html`<a class="btn btn-large" href=${lienWeb(c.cardmarket)} target="_blank" rel="noopener">Voir sur Cardmarket ${Ico.externe()}</a>`
         : html`<p class="aide">Carte absente de Cardmarket : cotée d’après les ventes conclues et les boutiques spécialisées.</p>`}
     </section>
 
